@@ -25,7 +25,7 @@ SECRET_KEY = 'v*k!y-yoyqcz@y2+ozk&5ut36egcsd7b!w!eh9e2gug8uw!!1+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'soda02.pythonanywhere.com']
 
 
 # Application definition
