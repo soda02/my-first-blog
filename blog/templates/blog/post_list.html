@@ -1,7 +1,15 @@
 <html>
 <body>
-<div style="font-size:100pt;">
-	<b>이승환 바보</b>
-</div>
+{% block content %}
+	{% for post in posts %}
+		<div class="post">
+			<div class="date">
+				{{ post.published_Date }}
+			</div>
+			<h1>{{ post.title }}</h1>
+			<p>{{ post.text|linebreaksbr }}</p>
+		</div>
+	{% endfor %}
+{% endblock content %}
 </body>
 </html>
