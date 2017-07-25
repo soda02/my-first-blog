@@ -1,0 +1,24 @@
+<h1>Post List</h1>
+
+{% for post in posts %}
+    <h3>{{ post.title }}</h3>
+    
+
+    <p> {{ post.description }}</p>
+
+{% endfor %}
+<br>
+
+<div>
+    <span>
+        {% if page_obj.has_previous %} 
+            <a href="?page={{ page_obj.previous_page_number }}">이전페이지</a>
+        {% endif %}
+
+        {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+
+        {% if page_obj.has_next %} 
+            <a href="?page={{ page_obj.next_page_number }}">다음페이지</a>
+        {% endif %}
+    </span>
+</div>
